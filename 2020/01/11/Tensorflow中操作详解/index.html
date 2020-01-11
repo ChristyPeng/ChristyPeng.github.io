@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>今天也要加油呢</title>
+    <title>Tensorflow中操作详解 | 今天也要加油呢</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="">
@@ -99,7 +99,7 @@
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
-            <li class=" active">
+            <li class="">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 首页
@@ -147,14 +147,13 @@
 </aside>
 
     <main id="main">
-        
-    <header class="top-header" id="header">
+        <header class="top-header" id="header">
     <div class="flex-row clearfix">
         <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>今天也要加油呢</span>
+            <span>Tensorflow中操作详解</span>
             
         </div>
         
@@ -164,13 +163,17 @@
         
     </div>
 </header>
-<header class="content-header index-header">
+<header class="content-header post-header">
     <img src="/img/sunshine.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">今天也要加油呢</h1>
+        <h1 class="title">Tensorflow中操作详解</h1>
         <h5 class="subtitle">
             
-                
+                <time datetime="2020-01-11T09:28:50.942Z" itemprop="datePublished" class="page-time">
+  2020-01-11
+</time>
+
+
             
         </h5>
         
@@ -192,130 +195,127 @@
     <div id="local-search-result"></div>
 </div>
 
-    <div class="container body-wrap">
-        <ul class="post-list">
+
+<div class="container body-wrap">
+    <article id="post-Tensorflow中操作详解"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Tensorflow中操作详解</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-01-11 17:28:50" datetime="2020-01-11T09:28:50.942Z"  itemprop="datePublished">2020-01-11</time>
+
+            
+
+
+            
+
+            
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <h2 id="Tensorflow中操作详解"><a href="#Tensorflow中操作详解" class="headerlink" title="Tensorflow中操作详解"></a>Tensorflow中操作详解</h2><h4 id="（一）tf-variable-scope"><a href="#（一）tf-variable-scope" class="headerlink" title="（一）tf.variable_scope()"></a>（一）tf.variable_scope()</h4><p><strong>目的</strong>：管理图中变量的名字。</p>
+<p><strong>变量</strong>：reuse = True, 直接获取该空间下由 tf.get_variable() 已经创建的变量</p>
+<p>​           reuse = tf.AUTO_REUSE，如果参数空间下的参数不存在就创建，如若已存在就直接获取</p>
+<p>​           reuse = None，此时 tf.get_variable() 只能创建新的变量，当同名变量已经存在时会报错</p>
+
+        </div>
         
-            <li class="post-list-item fade">
-                <article id="post-Tensorflow中操作详解"
-  class="article-card article-type-post" itemprop="blogPost">
-  
+<blockquote class="post-copyright">
+    <div class="content">
         
-<div class="item-thumb">
-    <a class="thumb-link" href="/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/"></a>
-    <div class="thumb-hover">
-        <span class="icon icon-eye"></span>
+<span class="post-time">
+    Last updated: <time datetime="2019-12-28T06:37:40.004Z" itemprop="dateUpdated">2019-12-28 14:37:40</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/" target="_blank" rel="external">http://yoursite.com/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/</a>
+        
     </div>
-    <img src="/img/thumb/2.jpg" alt="图片路径不正确">
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/christy.jpg" alt="ChristyPeng">
+            ChristyPeng
+        </a>
+    </footer>
+</blockquote>
+
+        
+        <div class="post-footer">
+            
+            <div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/&title=《Tensorflow中操作详解》 — 今天也要加油呢&pic=http://yoursite.com/img/christy.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/&title=《Tensorflow中操作详解》 — 今天也要加油呢&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
 
-  
-    <h3 class="post-title ab-title" itemprop="name">
-      <a class="post-title-link" href="/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/">Tensorflow中操作详解</a>
-    </h3>
-  
 
 
-
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
+        </div>
         
-    
-    
-    
-    <div class="post-meta">
-        <time class="post-time" title="2020-01-11 17:28:50" datetime="2020-01-11T09:28:50.942Z"  itemprop="datePublished">2020-01-11</time>
-
-        
+            
 
 
-        
-
-        
-
-
-        
         
     </div>
     
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        Tensorflow中操作详解（一）tf.variable_scope()目的：管理图中变量的名字。
-变量：reuse = True, 直接获取该空间下由 tf.get_variable() 已经创建的变量
-​           reuse = tf.AUTO_REUSE，如果参数空间下的参数不存在就创建，如若已存在就直接获取
-​           reuse = None，此时 tf....
-    
-    <a href="/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/" class="post-more waves-effect waves-button">
-        more
-    </a>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="next">
+      <a href="/2020/01/11/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
     </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tensorflow中操作详解"><span class="post-toc-number">1.</span> <span class="post-toc-text">Tensorflow中操作详解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#（一）tf-variable-scope"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">（一）tf.variable_scope()</span></a></li></ol></li></ol></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
 </article>
 
 
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-hello-world"
-  class="article-card article-type-post" itemprop="blogPost">
-  
-        
-<div class="item-thumb">
-    <a class="thumb-link" href="/2020/01/11/hello-world/"></a>
-    <div class="thumb-hover">
-        <span class="icon icon-eye"></span>
-    </div>
-    <img src="/img/thumb/1.jpg" alt="图片路径不正确">
-    
-
-
-  
-    <h3 class="post-title ab-title" itemprop="name">
-      <a class="post-title-link" href="/2020/01/11/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
 </div>
-
-        
-    
-    
-    
-    <div class="post-meta">
-        <time class="post-time" title="2020-01-11 14:44:33" datetime="2020-01-11T06:44:33.401Z"  itemprop="datePublished">2020-01-11</time>
-
-        
-
-
-        
-
-        
-
-
-        
-        
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-    
-    <a href="/2020/01/11/hello-world/" class="post-more waves-effect waves-button">
-        more
-    </a>
-    </div>
-</article>
-
-
-            </li>
-        
-        </ul>
-        
-    </div>
 
     </main>
     <footer class="footer ">
@@ -377,7 +377,7 @@ Qu...
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/&title=今天也要加油呢&pic=http://yoursite.com/img/christy.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/&title=《Tensorflow中操作详解》 — 今天也要加油呢&pic=http://yoursite.com/img/christy.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -389,7 +389,7 @@ Qu...
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/&title=今天也要加油呢&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/&title=《Tensorflow中操作详解》 — 今天也要加油呢&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -401,7 +401,7 @@ Qu...
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABW0lEQVR42u3aQQ7DIAxE0dz/0qnUVaUUMjNOF7W/VxVKw8sCMIbjkON8x6r9M/T/PhCwYDVindu4PqO0XNv1vmDBmszaD2y9S/33jQEWLFjC6/QFGBYsWL9muV3CggVrz1KSZmWy0JPvx3J5WLBasCrLbSVRfri+BQvW37JOM9xlOwtYsKax9CLRfhRXtrhGBgELVlPWSpptSvVk+qYvWLBgRUWiynWEL++BBQuW0KUy1BXWsgUWrGEsN2nOQNJRij67wILVlKUUZCvLuVJsks5gYcFqyqqUbt0jE2PqgQVrMMu9fJAdcCqTCCxY01jZQUi2uS2d/MCC1ZpVuXCQlWul1BwWrGGsLOXdd6kv5PVEHBasTqxsUtDTZXcqgQVrMisr/WTbVOkZWLBgyYPcPcMxMgVYsGA9tL1Uik3Lz4AFayQrS5rd1NmYE2DBGsbKrgtkxFI1CxasnqwXXY7FbVPN83MAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLklEQVR42u3awXLiQAwE0Pz/T7PXrcpiujXOFijPJwoMnjc5KGrN11d8Pf66kju/v76+5/vvf//us3eSVQ0vbGxs7A9hPy6v63vu4iWA2a89/WVsbGzsdex7S9H1t5ICOdv0ZJ3Y2NjY2NfFpi0nOWPWwGBjY2Nj5xFP+91ZC3H9DjY2NvZvZrf/7s/i++vv5tFS27RgY2Nj72bnoc/7v/6R+TY2Njb2G7Mf5XVS8JJWYRY/1QpsbGzsRey8ALRxfB4A5cOGZOibNzDY2NjYW9n5QnN2HujPxgP5AAMbGxt7H/skRr/r4M4NpahsVLCxsbG3smflpI2K8gJ2kue/aHiwsbGx17HzozB3zU/zEti2MVHZw8bGxl7EboOe8xFCW6LyT/MjR9jY2Nj72Hkon4xp8ztncX9+AOjF+9jY2Ngr2HUcU0ZI7RggL28nTRE2Njb2JnYezbTl5GSUmz8xaaWGhy+xsbGxP4R9EgPVRx7jgnQyYI7CJmxsbOxF7Ha5beORj2ZPBsB5aPVi0IuNjY39sex8JDCLb2ZHec4blShUwsbGxv5w9l0tx2w8nGzl7EDPi83CxsbGXsTOW458eJA3GG3zkI8Woi3GxsbGXsGeLbHocsrBcD5OmD33ad3GxsbG/nB28e972YTkWzPbuOE4GRsbG3sRO4/g87KRL262EW07lP+BsbGxsT+RfRIGzY715OOEk9HCi8gMGxsbex07eUBbeGaYvLq2z/3HfBsbGxt7HbstQnfB2kDqhkE1NjY29iJ2GxjNYqPzkW3bMhWZGTY2NvYK9iwSasP6fJzQDo/be7CxsbH3sduR6k/AZoOEm1sRbGxs7BXsfLnnBakdJLfNT1HAsLGxsVew80io3YI2xjofA0d/WmxsbOwV7Ed5nZS3u7Ymb4Serh8bGxt7Eft8VJC0E3nD83PtSvIpNjY29uey85agHRLMytVdG/fiN7GxsbHXsYsRablZ57FRO4ROQjFsbGzs38zOX+cFLC9pJyvBxsbGxv4/5S3PwE42ERsbG3sfu13iLMRvN+ikRN2WpWFjY2O/PTsvADNAPk44WUn+LGxsbOxF7D/tPX4ZNM7WDQAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
