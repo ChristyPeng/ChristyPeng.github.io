@@ -3,9 +3,10 @@
   
     
     <entry>
-      <title><![CDATA['logisticRegression']]></title>
+      <title><![CDATA[logisticRegression]]></title>
       <url>/2020/02/03/logisticRegression/</url>
-      <content type="html"><![CDATA[<h2 id="逻辑回归与线性回归"><a href="#逻辑回归与线性回归" class="headerlink" title="逻辑回归与线性回归"></a>逻辑回归与线性回归</h2><blockquote>
+      <content type="html"><![CDATA[<p>title: ‘’’logisticRegression’’’<br>date: 2020-02-03 12:31:37<br>tags: [Machine Learning]<br>categories: 计算机基础理论</p>
+<h2 id="逻辑回归与线性回归"><a href="#逻辑回归与线性回归" class="headerlink" title="逻辑回归与线性回归"></a>逻辑回归与线性回归</h2><blockquote>
 <p> 回归分析是通过拟合已知的数据分布（以简单的二元变量为例，即因变量 y 与自变量 x 的关系 ），从而来预测未知数据值（例 给定自变量 x ，结合数据分布预测因变量 y），其基本模型可表示为 $ y = wx+b $。</p>
 <p>该篇的主要内容包括：</p>
 <ol>
@@ -21,7 +22,7 @@
 <p>​        线性回归的基础形式：$ y = wx + b $</p>
 <p>​        逻辑回归的基础形式：$ g(y) = \frac{1}{1+e^{-y}} $  </p>
 <h5 style="color:red">    (注：归一化利用 sigmoid 函数实现)</h5>
-<img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\logic1.png" alt="logic1" style="zoom:80%;">  <img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\sigmoid.png" alt="sigmoid" style="zoom:57%;">
+<img src="/.com//logic1.png" alt="logic1" style="zoom:80%;">  <img src="/.com//sigmoid.png" alt="sigmoid" style="zoom:57%;">
 
 
 
@@ -75,23 +76,11 @@
 </ul>
 <h4 id="内容3：逻辑回归的应用场景及推导"><a href="#内容3：逻辑回归的应用场景及推导" class="headerlink" title="内容3：逻辑回归的应用场景及推导"></a>内容3：逻辑回归的应用场景及推导</h4><p>逻辑回归适用于分类任务，尤其是二分类任务。例如，判断是否是垃圾邮件、判断是否有危险异常等等。</p>
 <p>利用<strong>梯度下降法</strong>推导<strong>逻辑回归</strong>如下：（放张手写图，公式太多了…）</p>
-<img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\inference.png" alt="inference" style="zoom:80%;">
+<img src="/.com//inference.png" alt="inference" style="zoom:80%;">
 
 <p>(完)</p>
 ]]></content>
       
-        <categories>
-            
-            <category> 计算机基础理论 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-        </tags>
         
     </entry>
     
