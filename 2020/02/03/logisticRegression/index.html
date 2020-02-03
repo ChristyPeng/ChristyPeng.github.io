@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>&#39;logisticRegression&#39; | 今天也要加油呢</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Machine Learning">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="/css/style.css?v=1.4.4">
+    
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	false,
+            lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
+            v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":false,"lazy":true,"owner":"codefine","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
+            d: JSON.parse('{"app_id":null}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+    
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      
+      <img src="/img/texture.jpg" class="brand-bg">
+      
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/christy.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">ChristyPeng</h5>
+          <a href="mailto:915930938@qq.com" title="915930938@qq.com" class="mail">
+            
+              <span>9</span>
+            
+              <span>1</span>
+            
+              <span>5</span>
+            
+              <span>9</span>
+            
+              <span>3</span>
+            
+              <span>0</span>
+            
+              <span>9</span>
+            
+              <span>3</span>
+            
+              <span>8</span>
+            
+              <span>@</span>
+            
+              <span>q</span>
+            
+              <span>q</span>
+            
+              <span>.</span>
+            
+              <span>c</span>
+            
+              <span>o</span>
+            
+              <span>m</span>
+            
+          </a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/ChristyPeng" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                首页
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                文章分类
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                文章标签
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                资料仓库
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-plus-square"></i>
+                故事会
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>&#39;logisticRegression&#39;</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+    <img src="/img/sunshine.jpg" class="header-bg">
+    <div class="container fade-scale">
+        <h1 class="title">&#39;logisticRegression&#39;</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-02-03T04:31:37.000Z" itemprop="datePublished" class="page-time">
+  2020-02-03
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/">计算机基础理论</a></li></ul>
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-logisticRegression"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">'logisticRegression'</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-02-03 12:31:37" datetime="2020-02-03T04:31:37.000Z"  itemprop="datePublished">2020-02-03</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/">计算机基础理论</a></li></ul>
+
+
+
+            
+
+            
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <h2 id="逻辑回归与线性回归"><a href="#逻辑回归与线性回归" class="headerlink" title="逻辑回归与线性回归"></a>逻辑回归与线性回归</h2><blockquote>
+<p> 回归分析是通过拟合已知的数据分布（以简单的二元变量为例，即因变量 y 与自变量 x 的关系 ），从而来预测未知数据值（例 给定自变量 x ，结合数据分布预测因变量 y），其基本模型可表示为 $ y = wx+b $。</p>
+<p>该篇的主要内容包括：</p>
+<ol>
+<li>逻辑回归与线性回归的定义</li>
+<li>逻辑回归的特点及优缺点分析</li>
+<li>逻辑回归的应用与推导</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+
+<h4 id="内容1：逻辑回归与线性回归的定义"><a href="#内容1：逻辑回归与线性回归的定义" class="headerlink" title="内容1：逻辑回归与线性回归的定义"></a>内容1：逻辑回归与线性回归的定义</h4><p>​        逻辑回归和线性回归是回归分析中常见的两种模式。其中，逻辑回归的输出是范围为 [0, 1] 的概率值，线性回归的输出是实际的预测值。</p>
+<p>​        逻辑回归即在线性回归的基础上对其预测值进行归一化处理。</p>
+<p>​        线性回归的基础形式：$ y = wx + b $</p>
+<p>​        逻辑回归的基础形式：$ g(y) = \frac{1}{1+e^{-y}} $  </p>
+<h5 style="color:red">    (注：归一化利用 sigmoid 函数实现)</h5>
+
+<p><a rel='logisticRegression' href="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707102766.png" title="1580707102766" data-fancybox="images"><img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707102766.png" alt="1580707102766" style="zoom:80%;" /></a>  <a rel='logisticRegression' href="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707130227.png" title="1580707130227" data-fancybox="images"><img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707130227.png" alt="1580707130227" style="zoom:57%;" /></a></p>
+<h4 id="内容2：逻辑回归的特点及优缺点分析"><a href="#内容2：逻辑回归的特点及优缺点分析" class="headerlink" title="内容2：逻辑回归的特点及优缺点分析"></a>内容2：逻辑回归的特点及优缺点分析</h4><p>逻辑回归的<strong><u>特点有三</u></strong>：</p>
+<ul>
+<li><p><strong>逻辑回归需要归一化</strong></p>
+<p>​        逻辑回归使用梯度下降的方法进行参数优化，进行归一化有助于提高模型的收敛速度，增        加收敛精度。</p>
+</li>
+<li><p><strong>逻辑回归的应用中进行连续特征离散化</strong></p>
+<p>​        在工业界中，很少直接将连续值作为逻辑回归模型的特征输入，而是将一系列连续特征离        散化为一系列0、1特征，优势有下：</p>
+<p>​          (1) 离散特征的增加和减少都很容易，易于模型的快速迭代；</p>
+<p>​          (2) 稀疏向量的内积乘法运算速度快，计算结果方便存储，容易扩展；</p>
+<p>​          (3) 离散化后的特征对异常数据有很强的鲁棒性；</p>
+<p>​          (4) 逻辑回归属于广义线性模型，离散化相当于引入了非线性，能够提升模型的表达能力，加大拟合。</p>
+<p>​          (5) 简化了逻辑回归模型的作用，降低了过拟合的风险。</p>
+</li>
+<li><p><strong>逻辑回归也可解决非线性分类问题</strong></p>
+<p>​        逻辑回归虽然是线性表达形式，但只要合适的利用“核技巧”，也可用来解决非线性分类问题。</p>
+</li>
+</ul>
+<p>下面针对逻辑回归进行优缺点分析：</p>
+<h5 style="color:green">【逻辑回归优点】</h5>
+
+<ul>
+<li><p><strong>形式简单，模型的可解释强</strong></p>
+<p>​        从特征的不同权重可以看到不同的特征对最后结果的影响，某个特征的权重值比较高，则        该特征对预测结果影响更大。</p>
+</li>
+<li><p><strong>训练速度快，模型效果不错</strong></p>
+<p>​        计算速度仅与特征的数目相关。模型效果可以作为baseline，并行开发。</p>
+</li>
+<li><p><strong>资源占用小</strong></p>
+<p>​        需要存储的仅仅是各个维度的特征值。</p>
+</li>
+<li><p><strong>输出结果方便调整</strong></p>
+<p>​        由于输出的结果是每个样本的概率分数，容易进行阈值划分来区分类别。</p>
+</li>
+</ul>
+<h5 style="color:blue">【逻辑回归缺点】</h5>
+
+<ul>
+<li><p><strong>准确率不是很高</strong></p>
+<p>​        逻辑回归形式简单（类似线性模型），因此很难拟合真实的数据分布。</p>
+</li>
+<li><p><strong>难以处理数据不平衡问题</strong></p>
+<p>​        当样本数据严重不平衡时，总体样本预测效果好并不意味着分类器的效果好。</p>
+</li>
+<li><p><strong>难以处理非线行数据</strong></p>
+<p>​        在不引入其他方法的前提下，只能处理线性可分的数据。</p>
+</li>
+<li><p><strong>无法进行特征筛选</strong></p>
+<p>​        需要引入其他进行特征筛选，如 gbdt。</p>
+</li>
+</ul>
+<h4 id="内容3：逻辑回归的应用场景及推导"><a href="#内容3：逻辑回归的应用场景及推导" class="headerlink" title="内容3：逻辑回归的应用场景及推导"></a>内容3：逻辑回归的应用场景及推导</h4><p>逻辑回归适用于分类任务，尤其是二分类任务。例如，判断是否是垃圾邮件、判断是否有危险异常等等。</p>
+<p>利用<strong>梯度下降法</strong>推导<strong>逻辑回归</strong>如下：（放张手写图，公式太多了…）</p>
+<a rel='logisticRegression' href="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580712437875.png" title="1580712437875" data-fancybox="images"><img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580712437875.png" alt="1580712437875" style="zoom:80%;" /></a>
+
+<p>(完)</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-02-03T06:52:14.478Z" itemprop="dateUpdated">2020-02-03 14:52:14</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2020/02/03/logisticRegression/" target="_blank" rel="external">http://yoursite.com/2020/02/03/logisticRegression/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/christy.jpg" alt="ChristyPeng">
+            ChristyPeng
+        </a>
+    </footer>
+</blockquote>
+
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/03/logisticRegression/&title=《'logisticRegression'》 — 今天也要加油呢&pic=http://yoursite.com/img/christy.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/03/logisticRegression/&title=《'logisticRegression'》 — 今天也要加油呢&source=逻辑回归与线性回归
+ 回归分析是通过拟合已知的数据分布（以简单的二元变量为例，即因变量 y 与自变量 x 的关系 ），从而来预测未知数据值（例 给定自变量..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="next">
+      <a href="/2020/01/11/Tensorflow%E4%B8%AD%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Tensorflow中操作详解</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#逻辑回归与线性回归"><span class="post-toc-number">1.</span> <span class="post-toc-text">逻辑回归与线性回归</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内容1：逻辑回归与线性回归的定义"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">内容1：逻辑回归与线性回归的定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内容2：逻辑回归的特点及优缺点分析"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">内容2：逻辑回归的特点及优缺点分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内容3：逻辑回归的应用场景及推导"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">内容3：逻辑回归的应用场景及推导</span></a></li></ol></li></ol></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
+</article>
+
+
+</div>
+
+    </main>
+    <footer class="footer ">
+    
+    <div class="top">
+        
+            <p>
+    <span>Links：</span>
+    
+    <span class="blogroll-item">
+        <a href="https://www.lujingtao.com" target="_blank">HOME</a>
+    </span>
+    
+</p>
+
+        
+    </div>
+    
+    <div class="bottom">
+        <p>
+            <span>
+                ChristyPeng &copy; 2020
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+
+            
+                
+<span class="site-uv" title="总访客量">
+    <i class="icon icon-user"></i>
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>
+
+
+<span class="site-pv" title="总访问量">
+    <i class="icon icon-eye"></i>
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+            
+        </p>
+    </div>
+</footer>
+
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/03/logisticRegression/&title=《'logisticRegression'》 — 今天也要加油呢&pic=http://yoursite.com/img/christy.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/03/logisticRegression/&title=《'logisticRegression'》 — 今天也要加油呢&source=逻辑回归与线性回归
+ 回归分析是通过拟合已知的数据分布（以简单的二元变量为例，即因变量 y 与自变量 x 的关系 ），从而来预测未知数据值（例 给定自变量..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aS47CQAwFQO5/aWY7EpPw7G5Gwl1ZRRCSFAvLv8cjPp4vR379709ez+9/tfnAwMD4Wsbz9kgY96+VPCV/7iUVAwPjAEbyEuu/Su7WuwMGBgZGwkgSvuSeGBgYGHsZV2lc/gkGBgZGzkiKyftbV9O+PChvrsUxMDC+kJF33f///CPzDQwMjK9irDTr84FBniz2DgwMjNmMPMBVW2a7Ane+zIGBgXEaIykpe+sUVUBhvQMDA+MARu92eYLYYxeCOwYGxmjGSvKXn/d6gRtabxgYGCMYyWhwvU3Wy+IKMAwMjNGMPGnrBdNdiWNz1oqBgTGCkSeFux7fw7xpz2FgYIxm9Fps+V/wifL18t0wMDDGMaphbmUt4/6a6nDics0CAwNjHKMX+Kovl6eP+WoFBgbGOYxqi61aoOavmCP/eBYGBsZoRnU8kJeveejM/4hCgY2BgTGUUV2SqI4QqkXy0rIFBgbGUEbSCOuFy14CmjfmMDAwTmBUx43VhC8ZbVaXM6KmGwYGxjhGUnauB9xqyVoohjEwMI5hrBSl1bFo7w5vNkcwMDDGMZ7FIw+F1eWwalPvTVKIgYExiNELkdX1iOqr5Nc3d9wwMDC+kJEE2V5grQ4VVgalGBgYJzA+0QjL08oqEgMDA6M6etw1yFwZlGJgYGD0BpMb9tRun365M4KBgTGU0Vst7X27PtTEwMA4jdErHVcmD9V1sfy5GBgY4xg/51zk87tSJN0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.4.4"></script>
+<script type="text/javascript" src="/js/plugins/ios-orientationchange-fix.js?v=1.4.4"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.4.4"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.4.4"></script>
+
+<!-- third-party -->
+
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.4.4"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+
+
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
