@@ -21,8 +21,10 @@
 <p>​        线性回归的基础形式：$ y = wx + b $</p>
 <p>​        逻辑回归的基础形式：$ g(y) = \frac{1}{1+e^{-y}} $  </p>
 <h5 style="color:red">    (注：归一化利用 sigmoid 函数实现)</h5>
+<img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\logic1.png" alt="logic1" style="zoom:80%;">  <img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\sigmoid.png" alt="sigmoid" style="zoom:57%;">
 
-<p><img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707102766.png" alt="1580707102766" style="zoom:80%;" />  <img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580707130227.png" alt="1580707130227" style="zoom:57%;" /></p>
+
+
 <h4 id="内容2：逻辑回归的特点及优缺点分析"><a href="#内容2：逻辑回归的特点及优缺点分析" class="headerlink" title="内容2：逻辑回归的特点及优缺点分析"></a>内容2：逻辑回归的特点及优缺点分析</h4><p>逻辑回归的<strong><u>特点有三</u></strong>：</p>
 <ul>
 <li><p><strong>逻辑回归需要归一化</strong></p>
@@ -42,11 +44,10 @@
 </ul>
 <p>下面针对逻辑回归进行优缺点分析：</p>
 <h5 style="color:green">【逻辑回归优点】</h5>
+- **形式简单，模型的可解释强**
 
+<p>  ​        从特征的不同权重可以看到不同的特征对最后结果的影响，某个特征的权重值比较高，则        该特征对预测结果影响更大。</p>
 <ul>
-<li><p><strong>形式简单，模型的可解释强</strong></p>
-<p>​        从特征的不同权重可以看到不同的特征对最后结果的影响，某个特征的权重值比较高，则        该特征对预测结果影响更大。</p>
-</li>
 <li><p><strong>训练速度快，模型效果不错</strong></p>
 <p>​        计算速度仅与特征的数目相关。模型效果可以作为baseline，并行开发。</p>
 </li>
@@ -58,11 +59,10 @@
 </li>
 </ul>
 <h5 style="color:blue">【逻辑回归缺点】</h5>
+- **准确率不是很高**
 
+<p>  ​        逻辑回归形式简单（类似线性模型），因此很难拟合真实的数据分布。</p>
 <ul>
-<li><p><strong>准确率不是很高</strong></p>
-<p>​        逻辑回归形式简单（类似线性模型），因此很难拟合真实的数据分布。</p>
-</li>
 <li><p><strong>难以处理数据不平衡问题</strong></p>
 <p>​        当样本数据严重不平衡时，总体样本预测效果好并不意味着分类器的效果好。</p>
 </li>
@@ -75,7 +75,7 @@
 </ul>
 <h4 id="内容3：逻辑回归的应用场景及推导"><a href="#内容3：逻辑回归的应用场景及推导" class="headerlink" title="内容3：逻辑回归的应用场景及推导"></a>内容3：逻辑回归的应用场景及推导</h4><p>逻辑回归适用于分类任务，尤其是二分类任务。例如，判断是否是垃圾邮件、判断是否有危险异常等等。</p>
 <p>利用<strong>梯度下降法</strong>推导<strong>逻辑回归</strong>如下：（放张手写图，公式太多了…）</p>
-<img src="C:\Users\chris\AppData\Roaming\Typora\typora-user-images\1580712437875.png" alt="1580712437875" style="zoom:80%;" />
+<img src="/.com//3-TyporaNotes\hexo\source\_posts\logisticRegression\inference.png" alt="inference" style="zoom:80%;">
 
 <p>(完)</p>
 ]]></content>
